@@ -38,6 +38,10 @@ public class UtenteEntity {
     private Date dataNascita;
 
     @Setter(AccessLevel.PUBLIC)
+    @Column(name = "F_VALIDO")
+    private boolean valido = false;
+
+    @Setter(AccessLevel.PUBLIC)
     @Column(name = "F_ATTIVO")
     private boolean attivo = false;
 

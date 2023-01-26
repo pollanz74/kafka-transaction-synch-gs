@@ -5,6 +5,8 @@ import lombok.experimental.UtilityClass;
 @UtilityClass
 public class TopicUtils {
 
-    public static final String TOPIC_NAME = "users";
+    public static final String TOPIC_NAME_USER_ACTIVATION = "users.activation";
+
+    public static final String TOPIC_NAME_USER_VALIDATION = "users.validation";
 
 }

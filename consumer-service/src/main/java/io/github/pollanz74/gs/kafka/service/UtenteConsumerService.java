@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 
-import static io.github.pollanz74.gs.kafka.utils.TopicUtils.TOPIC_NAME;
+import static io.github.pollanz74.gs.kafka.utils.TopicUtils.TOPIC_NAME_USER_ACTIVATION;
 
 @Slf4j
 @Service
@@ -19,7 +19,7 @@ public class UtenteConsumerService {
     private final UtenteService utenteService;
 
     @KafkaListener(
-            topics = TOPIC_NAME,
+            topics = TOPIC_NAME_USER_ACTIVATION,
             concurrency = "3")
     @Transactional
     public void listen(UtenteEntity utente) {
